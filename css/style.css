@@ -3,3 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+.bottom-section {
+    height: 100px;
+    background-color: brown;
+}
+.top-section {
+    height: calc(100vh - 100px);
+    background-color: darkblue;
+}
