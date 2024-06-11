@@ -5,7 +5,7 @@
 }
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100%;
 }
 .row {
     display: flex;
@@ -16,7 +16,8 @@
     margin: 10px;
     border: 1px dashed white;
     background-color: darkmagenta;
-    height: 30px;
+    /* height: 30px;
+    width: 30px; */
 }
 /*SIDEBAR*/
 .sidebar .row {
@@ -44,39 +45,41 @@
 }
 /*BOTTOM-SECTION*/
 .col-33 {
+    width: calc(100% / 3);
     height: 100px;
-    width: calc(100vw / 3);
     border: 1px dashed white;
-}
-.bottom-section {
-    height: 100px;
-    background-color: brown;
-}
-.bottom-section .col-33 {
+    background-color: red;
     display: flex;
     align-items: center;
 }
-.bottom-section .content {
-    width: 50%;
-}
-.middle {
-    flex-direction: column;
-}
-.right {
+.col-33.right {
     justify-content: flex-end;
 }
+.col-33.middle {
+    flex-direction: column;
+}
+.icons {
+    background-color: aquamarine;
+    width: 50%;
+}
+.controls {
+    background-color: burlywood;
+    width: 50%;
+}
+
+
 /*TOP-SECTION*/
 .top-section {
     height: calc(100vh - 100px);
     background-color: darkblue;
     display: flex;
 }
+
 .main-content {
     width: calc(100vw - 75px);
     background-color: darkgreen;
 }
 header {
-    width: calc(100vw - 75px);
     text-align: right;
     position: fixed;
     left: 75px;
@@ -86,7 +89,7 @@ header {
 }
 
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 480px) {
     .sidebar {
         width: 200px;
     }
@@ -96,5 +99,10 @@ header {
     header {
         left: 200px;
         width: calc(100vw - 200px);
+    }
+}
+@media screen and (min-width: 768px) {
+    .heartfolder .heart, .heartfolder .folder {
+        display: inline;
     }
 }
