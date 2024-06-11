@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container {
     margin: 0 auto;
@@ -12,12 +13,25 @@
     flex-wrap: wrap;
 }
 .content {
-    padding: 10px;
+    padding: 5px;
     margin: 10px;
     border: 1px dashed white;
     background-color: darkmagenta;
     /* height: 30px;
     width: 30px; */
+}
+h2 {
+    color: white;
+    margin: 20px 20px 5px;
+}
+p {
+    margin: 5px;
+}
+hr {
+    background-color: yellowgreen;
+    height: 4px;
+    width: 50%;
+    margin: auto;
 }
 /*SIDEBAR*/
 .sidebar .row {
@@ -61,10 +75,12 @@
 .icons {
     background-color: aquamarine;
     width: 50%;
+    margin-bottom: 2px;
 }
 .controls {
     background-color: burlywood;
     width: 50%;
+    margin-top: 2px;
 }
 
 
@@ -74,7 +90,6 @@
     background-color: darkblue;
     display: flex;
 }
-
 .main-content {
     width: calc(100vw - 75px);
     background-color: darkgreen;
@@ -93,6 +108,20 @@ main {
     background-color: chocolate;
     border: 1px dashed white;
 }
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+ul li {
+    width: calc(100% / 4);
+    padding: 0 5px;
+    font-size: 10px;
+    text-align: center;
+}
 .col-50 {
     width: calc(100% / 2);
     background-color: red;
@@ -110,6 +139,10 @@ main {
         left: 200px;
         width: calc(100vw - 200px);
     }
+    ul li {
+        width: calc(100% / 3);
+    }
+    
 }
 @media screen and (min-width: 768px) {
     .heartfolder .heart, .heartfolder .folder {
@@ -118,9 +151,18 @@ main {
     .col-50 {
         width: calc(100% / 4);
     }
+    .main-menu {
+        width: 80%;
+    }
+    ul li {
+        width: calc(100% / 5);
+    }
 }
 @media screen and (min-width: 992px) {
     .col-50 {
+        width: calc(100% / 6);
+    }
+    ul li {
         width: calc(100% / 6);
     }
 }
