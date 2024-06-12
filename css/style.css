@@ -32,7 +32,7 @@ p {
 p, li, .gray {
     color: gray;
 }
-hr:not(.sidebar-bottom) {
+.sidebar-top hr, .main-menu hr {
     background-color: yellowgreen;
     height: 4px;
 }
@@ -93,7 +93,7 @@ hr:not(.sidebar-bottom) {
     display: none;
 }
 /*hover effect*/
-.hidden.gray:hover, .heartfolder i:hover, .main-menu li:hover {
+.hidden.gray:hover, .heartfolder i:hover, .main-menu li:hover, .icons i, .dot, .col-33.right i {
     color: white;
 }
 .content.menu i:hover {
@@ -108,39 +108,47 @@ hr:not(.sidebar-bottom) {
 .icons .fa-xl {
     display: block;
 }
-.icons .fa-xl:hover {
+.icons:hover .fa-2xl {
+    display: block;
+}
+.icons:hover .fa-xl {
     display: none;
 }
-.icons .fa-2xl:hover {
+.playbar i {
+    display: none;
+}
+.playbar:hover i {
     display: block;
 }
 /*BOTTOM-SECTION*/
 .col-33 {
     width: calc(100% / 3);
     height: 100px;
-    border: 1px dashed white;
-    background-color: red;
+    background-color: black;
     display: flex;
     align-items: center;
 }
 .col-33.right {
     justify-content: flex-end;
 }
+.name-now .white, .name-now .gray {
+    margin-left: 5px;
+}
 .col-33.middle {
     flex-direction: column;
     justify-content: space-around;
 }
-.icons {
-    background-color: aquamarine;
+.icons, .controls, .playbar, .col-33.right .content {
     display: flex;
     align-items: center;
 }
-.icons span {
+.icons span, .col-33.right i {
     margin: 5px;
 }
 .controls {
-    background-color: burlywood;
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 .now-playing {
     display: flex;
@@ -148,6 +156,32 @@ hr:not(.sidebar-bottom) {
 }
 .now-playing img {
     width: 50px;
+}
+.current, .end {
+    font-size: 10px;
+    color: white;
+    margin: 0 5px;
+}
+.playbar .gray hr, .playbar .white hr {
+    height: 4px;
+}
+.playbar .white hr {
+    background-color: white;
+}
+.playbar .gray hr {
+    background-color: gray;
+}
+.controls .white hr {
+    width: 5vw;
+}
+.controls .gray hr {
+    width: 10vw;
+}
+.col-33.right .white hr {
+    width: 6vw;
+}
+.col-33.right .gray hr {
+    width: 9vw;
 }
 
 /*TOP-SECTION*/
