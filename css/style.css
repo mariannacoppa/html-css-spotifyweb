@@ -14,7 +14,7 @@
 }
 .content {
     padding: 5px;
-    margin: 10px;
+    /* margin: 10px; */
     /* border: 1px dashed white;
     background-color: darkmagenta; */
     /* height: 30px;
@@ -29,15 +29,14 @@ h2, h4 {
 p {
     margin: 5px;
 }
-p, li {
+p, li, .gray {
     color: gray;
 }
-hr {
+hr:not(.sidebar-bottom) {
     background-color: yellowgreen;
     height: 4px;
-    width: 50%;
-    margin: auto;
 }
+
 /*SIDEBAR*/
 .sidebar .row {
     height: calc(100vh - 100px);
@@ -53,7 +52,6 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: crimson;
     border: 1px dashed white;
 }
 .sidebar-bottom, .sidebar-top {
@@ -61,6 +59,38 @@ hr {
 }
 .sidebar-bottom {
     justify-content: flex-end;
+}
+.content.menu {
+    display: flex;
+    align-items: center;
+    padding-left: 0%;
+    margin-left: 0%;
+    margin-top: 15px;
+}
+.sidebar-bottom .content.menu {
+    margin: 10px auto;
+}
+.content.menu h3, .content.menu i {
+    margin-right: 10px;
+}
+.content.menu hr {
+    width: 20px;
+    rotate: 90deg;
+}
+.unselected {
+    visibility: hidden;
+}
+.content.menu i:not(.fa-house) {
+    filter: invert(50%);
+}
+.white, .fa-circle-play, .fa-house {
+    color: white;
+}
+.sidebar img {
+    width: 50px;
+}
+.hidden {
+    display: none;
 }
 /*BOTTOM-SECTION*/
 .col-33 {
@@ -88,8 +118,15 @@ hr {
     margin-top: 2px;
 }
 
-
 /*TOP-SECTION*/
+header button {
+    background-color: black;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+}
 .top-section {
     height: calc(100vh - 100px);
     background-color: darkblue;
@@ -98,6 +135,10 @@ hr {
 .main-content {
     width: calc(100vw - 75px);
     background-color: darkgreen;
+}
+.main-content hr {
+    width: 50%;
+    margin: auto;
 }
 header {
     text-align: right;
@@ -110,7 +151,7 @@ header {
 }
 main {
     margin-top: 50px;
-    background-color: chocolate;
+    
     border: 1px dashed white;
     overflow-y: auto;
     height: calc(100vh - 150px);
@@ -137,7 +178,40 @@ ul li {
 .text {
     text-align: center;
 }
+/*hover*/
+.content.foto {
+    position: relative;
+}
+.content.foto img, .hidden-img {
+    width: 100%;
+    height: 100%;
+}
+.visible-img {
+    display: block;
+}
+.hidden-img {
+    background-color: rgba(5, 5, 5, 0.03);
+    display: none;
+}
+.hidden-img i {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.content.foto:hover .visible-img {
+    display: none;
+}
+.content.foto:hover .hidden-img {
+    display: block;
+}
+/*round*/
+.content.foto.round img {
+    border-radius: 50%;
+    object-fit: cover;
+}
 
+/*LAYOUT*/
 @media screen and (min-width: 576px) {
     .sidebar {
         width: 200px;
@@ -152,7 +226,9 @@ ul li {
     ul li {
         width: calc(100% / 3);
     }
-    
+    .hidden {
+        display: inline-block;
+    }
 }
 @media screen and (min-width: 768px) {
     .heartfolder .heart, .heartfolder .folder {
