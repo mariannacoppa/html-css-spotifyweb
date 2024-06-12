@@ -14,16 +14,11 @@
 }
 .content {
     padding: 5px;
-    /* margin: 10px; */
-    /* border: 1px dashed white;
-    background-color: darkmagenta; */
-    /* height: 30px;
-    width: 30px; */
 }
-h2 {
+main h2 {
     margin: 20px 20px 5px;
 }
-h2, h4 {
+h2, h4, .spotify h3 {
     color: white;
 }
 p {
@@ -65,10 +60,10 @@ p, li, .gray {
     align-items: center;
     padding-left: 0%;
     margin-left: 0%;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 .sidebar-bottom .content.menu {
-    margin: 10px auto;
+    margin: 0px auto;
 }
 .content.menu h3, .content.menu i {
     margin-right: 10px;
@@ -91,6 +86,19 @@ p, li, .gray {
 }
 .hidden {
     display: none;
+}
+.content.menu a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 20px;
+    padding: 5px;
+    margin: auto;
+}
+
+.content.menu li {
+    margin: 5px;
+    width: 100%;
 }
 /*hover effect*/
 .hidden.gray:hover, .heartfolder i:hover, .main-menu li:hover, .icons i, .dot, .col-33.right i {
@@ -184,7 +192,6 @@ p, li, .gray {
     width: 9vw;
 }
 
-/*TOP-SECTION*/
 /*header*/
 header button {
     background-color: black;
