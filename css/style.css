@@ -119,6 +119,7 @@ hr:not(.sidebar-bottom) {
 }
 
 /*TOP-SECTION*/
+/*header*/
 header button {
     background-color: black;
     padding: 10px;
@@ -129,12 +130,14 @@ header button {
 }
 .top-section {
     height: calc(100vh - 100px);
-    background-color: darkblue;
+    background-color: rgb(64, 64, 64);
     display: flex;
 }
 .main-content {
     width: calc(100vw - 75px);
-    background-color: darkgreen;
+}
+.main-content button:hover {
+    padding: 15px;
 }
 .main-content hr {
     width: 50%;
@@ -149,10 +152,9 @@ header {
     width: calc(100vw - 75px);
     background-color: rgba(0, 0, 0, 0.222);
 }
+/*main*/
 main {
     margin-top: 50px;
-    
-    border: 1px dashed white;
     overflow-y: auto;
     height: calc(100vh - 150px);
 }
@@ -172,13 +174,11 @@ ul li {
 }
 .col-50 {
     width: calc(100% / 2);
-    background-color: red;
-    border: 1px dashed white;
 }
 .text {
     text-align: center;
 }
-/*hover*/
+/*main hover*/
 .content.foto {
     position: relative;
 }
