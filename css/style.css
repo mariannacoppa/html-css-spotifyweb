@@ -92,6 +92,28 @@ hr:not(.sidebar-bottom) {
 .hidden {
     display: none;
 }
+/*hover effect*/
+.hidden.gray:hover, .heartfolder i:hover, .main-menu li:hover {
+    color: white;
+}
+.content.menu i:hover {
+    filter: invert(100%);
+}
+.now-playing .gray:hover {
+    text-decoration: underline;
+}
+.icons .fa-2xl {
+    display: none;
+}
+.icons .fa-xl {
+    display: block;
+}
+.icons .fa-xl:hover {
+    display: none;
+}
+.icons .fa-2xl:hover {
+    display: block;
+}
 /*BOTTOM-SECTION*/
 .col-33 {
     width: calc(100% / 3);
@@ -106,16 +128,26 @@ hr:not(.sidebar-bottom) {
 }
 .col-33.middle {
     flex-direction: column;
+    justify-content: space-around;
 }
 .icons {
     background-color: aquamarine;
-    width: 50%;
-    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+}
+.icons span {
+    margin: 5px;
 }
 .controls {
     background-color: burlywood;
     width: 50%;
-    margin-top: 2px;
+}
+.now-playing {
+    display: flex;
+    align-items: center;
+}
+.now-playing img {
+    width: 50px;
 }
 
 /*TOP-SECTION*/
